@@ -8,7 +8,38 @@
 /*
 /***********************************************************************************************/
 
+const config = require('./lib/config');
+const dbService = require('./server');
+
 function main() {
+    let options = config.options;
+
+    if(process.argv.length > 2) {
+        console.log(`Received command line arguments`)
+    }
+
+    //parse the arguments
+    for (var i=0; i < process.argv.length; i++) {
+        var key = process.argv[i];
+        var value = process.argv[i+1];
+    
+        if (key) {
+            switch (key) {
+                case '-level':
+                    options.log.level = value;
+                    break;
+                case '-maxsize':
+                    options.log.maxLogSize = value;
+                    break;
+                case '-port':
+                    options.app.appPort = value;
+                    break;
+            }
+        }
+    }
+
+    //call main server module
+    new dbService(options);
 }
 
 main();
