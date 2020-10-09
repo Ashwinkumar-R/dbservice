@@ -76,6 +76,88 @@ class dbService {
             .resolve(fn(req, res, next))
             .catch(next);
 
+        /* customers/DB endpoints */
+
+        router.post('/addCustomer', asyncExpHandler(async function (req,res,next) {
+            let args = req.body;
+        }))
+
+        router.post('/deleteCustomer', asyncExpHandler(async function (req,res,next) {
+            let args = req.body;
+        }))
+
+        router.get('/getCustomer', asyncExpHandler(async function (req,res,next) {
+            let args = req.body;
+        }))
+
+        router.get('/getAllCustomers', asyncExpHandler(async function (req,res,next) {
+            let args = req.body;
+        }))
+
+        /* user/visitors endpoints */
+
+        router.post('/addUser', asyncExpHandler(async function (req,res,next) {
+            let args = req.body;
+        }))
+
+        router.post('/addVisitor', asyncExpHandler(async function (req,res,next) {
+            let args = req.body;
+        }))
+
+        router.post('/deleteUser', asyncExpHandler(async function (req,res,next) {
+            let args = req.body;
+        }))
+
+        router.post('/deleteVisitor', asyncExpHandler(async function (req,res,next) {
+            let args = req.body;
+        }))
+
+        router.post('/updateUser', asyncExpHandler(async function (req,res,next) {
+            let args = req.body;
+        }))
+
+        router.post('/updateVisitor', asyncExpHandler(async function (req,res,next) {
+            let args = req.body;
+        }))
+
+        router.get('/getUser', asyncExpHandler(async function (req,res,next) {
+            let args = req.body;
+        }))
+
+        router.get('/getAllUsers', asyncExpHandler(async function (req,res,next) {
+            let args = req.body;
+        }))
+
+        router.get('/getVisitor', asyncExpHandler(async function (req,res,next) {
+            let args = req.body;
+        }))
+
+        router.get('/getAllVisitors', asyncExpHandler(async function (req,res,next) {
+            let args = req.body;
+        }))
+
+        /* conversation endpoints */  
+
+        router.post('/addConversation', asyncExpHandler(async function (req,res,next) {
+            let args = req.body;
+        }))
+
+        router.post('/deleteConversation', asyncExpHandler(async function (req,res,next) {
+            let args = req.body;
+        }))
+
+        router.post('/updateConversation', asyncExpHandler(async function (req,res,next) {
+            let args = req.body;
+        }))
+
+        router.get('/getConversation', asyncExpHandler(async function (req,res,next) {
+            let args = req.body;
+        }))
+
+        router.get('/getAllConversation', asyncExpHandler(async function (req,res,next) {
+            let args = req.body;
+        }))
+
         //middleware to handle errors
         router.use(function(err, req, res, next) {
             that.logger.error('Unhandled error occurred: ' + err);

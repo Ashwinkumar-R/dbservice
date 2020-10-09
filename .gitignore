@@ -9,3 +9,7 @@ node_modules
 #log files
 *.log
 logs
+
+#secrets
+*.pem
+*.ppk
