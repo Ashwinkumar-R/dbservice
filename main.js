@@ -34,6 +34,21 @@ function main() {
                 case '-port':
                     options.app.appPort = value;
                     break;
+                case '-dbhost':
+                    options.db_params.dbhost = value;
+                    break;
+                case '-dbport':
+                    options.db_params.dbport = value;
+                    break;
+                case '-dbuser':
+                    options.db_params.dbuser = value;
+                    break;
+                case '-dbpass':
+                    options.db_params.dbpass = value;
+                    break;
+                case '-cafile':
+                    options.db_params.cafile = value;
+                    break;
             }
         }
     }

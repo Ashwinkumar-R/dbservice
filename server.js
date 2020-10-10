@@ -11,6 +11,7 @@ const ip = require('ip');
 const common = require('./lib/common');
 const config = require('./lib/config');
 const logger = require('./lib/logger');
+const dbConnection = require('./lib/mongodb');
 
 const to = common.to; //wrapper to resolve "await" promise
 
@@ -20,6 +21,9 @@ const LOG_FILE = config.DEFAULT_LOG_DIR + config.APP_NAME + '_' + common.getIsoT
 class dbService {
     constructor(options) {
         this.options = options;
+        this.dbHandler = null; // db connection handler
+        this.dbReconnectTimer = null; //db reconnection timer, used for reconnecting to DB
+        this.appReady = false; // check application is initialized, (db connection should be ready)
 
         //init logger
         let logParams = {
@@ -52,8 +56,43 @@ class dbService {
     async init_app() {
         this.logger.info('init_app: Start initializing the main modules')
 
+        //intialize db connection
+        await this.init_db();
+
         //initialize APIs
         await this.init_routes();
+    }
+
+    //To check whether App is ready to process request to/from DB
+    isAppReady() {
+        return this.appReady && this.dbHandler.isConnected()
+    }
+
+    /**********************************
+      DB related methods and operation 
+    ***********************************/
+
+    async init_db() {
+        if (!this.dbHandler) {
+            this.dbHandler = new dbConnection(this.logger, this.options);
+        }
+
+        //clear previous db reconnect timers
+        if (this.dbReconnectTimer !== null) {
+            clearTimeout(this.dbReconnectTimer);
+            this.dbReconnectTimer = null;
+        }
+
+        try {
+            await this.dbHandler.connect();
+            this.logger.debug(`init_db: Successfully connected to DocumentDB`);
+            this.appReady = true; //set the application to ready state
+        } catch (err) {
+            this.appReady = false;
+            this.logger.error(err);
+            this.logger.debug(`init_db: Init the DocumentDB reconnecting with ${this.options.db_params.dbreconntout} ms delay...`);
+            this.dbReconnectTimer = setTimeout(this.init_db.bind(this), this.options.db_params.dbreconntout); // In case of connection error, retry connecting after given secs
+        }
     }
 
     /**********************************
