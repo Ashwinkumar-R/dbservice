@@ -168,7 +168,7 @@ class dbService {
         }))
 
         router.delete('/deleteData', asyncExpHandler(async function (req,res,next) {
-            if (!req.query && !req.query.type && !req.query.value) {
+            if (!req.query && !req.query.type && !req.query.key) {
                 let msg = `required arguments are missing`;
                 res.status(400).send({result:'error', msg:msg});         
             } else {
@@ -189,9 +189,11 @@ class dbService {
         }))
 
         router.put('/updateData', asyncExpHandler(async function (req,res,next) {
-            let args = req.body;
-            if (args) {
-                let output = await that.performDBOperation(args, that.enums.operation.UPDATE);
+            if (!req.query && !req.query.type && !req.query.customer && !req.query.key && !req.query.newdata) {
+                let msg = `required arguments are missing`;
+                res.status(400).send({result:'error', msg:msg});         
+            } else {
+                let output = await that.performDBOperation(req.query, that.enums.operation.UPDATE);
 
                 if (output.status == 'ok') {
                     let msg = `successfully executed`;
@@ -199,9 +201,6 @@ class dbService {
                 } else {
                     res.status(404).send({result:'error', msg:output.msg});
                 }
-            } else {
-                let msg = `empty arguments`;
-                res.status(400).send({result:'error', msg:msg});
             }
         }))
 
