@@ -232,7 +232,15 @@ class dbService {
 
     // To gracefully close connections and final cleanup
     async closeConnections() {
+        this.plannedStop = true;
+        if (this.dbHandler) {
+            await this.dbHandler.close(); //close db connection
+        }
+
+        this.logger.debug('closeConnections: Exiting');
+        await common.sleep(1000); //2secs grace period to complete writing final logs
         process.exit();
+
     }
 }
 
