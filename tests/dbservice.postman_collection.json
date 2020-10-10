@@ -1,0 +1,570 @@
+{
+	"info": {
+		"_postman_id": "7d3e3b54-8fa9-4648-8ee5-4c234e4fbc21",
+		"name": "dbservice",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "add new customer",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "a2b45dd3-1a50-4219-8015-0a1445ac3392",
+						"exec": [
+							"pm.test(\"add customer\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"type\":\"customer\", \"name\":\"insent\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://54.254.31.54:8080/dbservice/insertData",
+					"protocol": "http",
+					"host": [
+						"54",
+						"254",
+						"31",
+						"54"
+					],
+					"port": "8080",
+					"path": [
+						"dbservice",
+						"insertData"
+					]
+				},
+				"description": "Add customer"
+			},
+			"response": []
+		},
+		{
+			"name": "insert user",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "976651de-3413-4e65-9333-328405d9f0e3",
+						"exec": [
+							"pm.test(\"insert user\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"type\":\"user\", \"customer\":\"insent\", \"data\":{\"email\":\"xyz@gmail.com\",\"password\":\"abc\",\"name\":\"abc\",\"image\":\"http://abc.com\"}}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://54.254.31.54:8080/dbservice/insertData",
+					"protocol": "http",
+					"host": [
+						"54",
+						"254",
+						"31",
+						"54"
+					],
+					"port": "8080",
+					"path": [
+						"dbservice",
+						"insertData"
+					]
+				},
+				"description": "insert user data"
+			},
+			"response": []
+		},
+		{
+			"name": "insert visitor",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "fe6f6baf-f911-46f3-909e-f0f9424e3b45",
+						"exec": [
+							"pm.test(\"insert visitor\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"type\":\"visitor\", \"customer\":\"insent\", \"data\":{\"email\":\"xyz@gmail.com\",\"company\":\"abc\",\"name\":\"abc\",\"image\":\"http://abc.com\"}}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://54.254.31.54:8080/dbservice/insertData",
+					"protocol": "http",
+					"host": [
+						"54",
+						"254",
+						"31",
+						"54"
+					],
+					"port": "8080",
+					"path": [
+						"dbservice",
+						"insertData"
+					]
+				},
+				"description": "insert new visitor"
+			},
+			"response": []
+		},
+		{
+			"name": "insert conversation",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "45ebad06-5bf5-4f8c-944d-c56cd6900d60",
+						"exec": [
+							"pm.test(\"get conversation\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"type\":\"conversation\", \"customer\":\"insent\", \"data\" : { \"name\":\"welcome\", \"users\": [{\r\n\t\t\"userId\": 1,\r\n\t\t\"type\": \"user\"\r\n\t}],\r\n\t\"logs\": [{\r\n\t\t\"message\": \"hello\",\r\n\t\t\"senderId\": \"5349b4ddd2781d08c09890f4\",\r\n\t\t\"timestamp\": 123,\r\n\t\t\"senderType\": \"user\"\r\n\t}]\r\n}\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://54.254.31.54:8080/dbservice/insertData",
+					"protocol": "http",
+					"host": [
+						"54",
+						"254",
+						"31",
+						"54"
+					],
+					"port": "8080",
+					"path": [
+						"dbservice",
+						"insertData"
+					]
+				},
+				"description": "insert conversation"
+			},
+			"response": []
+		},
+		{
+			"name": "delete customer",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "0f6091e2-4a20-4e20-a08c-f8417d5e5521",
+						"exec": [
+							"pm.test(\"delete customer\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://54.254.31.54:8080/dbservice/deleteData?type=customer&key=insent",
+					"protocol": "http",
+					"host": [
+						"54",
+						"254",
+						"31",
+						"54"
+					],
+					"port": "8080",
+					"path": [
+						"dbservice",
+						"deleteData"
+					],
+					"query": [
+						{
+							"key": "type",
+							"value": "customer"
+						},
+						{
+							"key": "key",
+							"value": "insent"
+						}
+					]
+				},
+				"description": "delete customer db"
+			},
+			"response": []
+		},
+		{
+			"name": "delete visitor",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "22520b22-01f8-4fdf-a971-365822110842",
+						"exec": [
+							"pm.test(\"delete visitor\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://54.254.31.54:8080/dbservice/deleteData?type=visitor&customer=insent&key=xyz@gmail.com",
+					"protocol": "http",
+					"host": [
+						"54",
+						"254",
+						"31",
+						"54"
+					],
+					"port": "8080",
+					"path": [
+						"dbservice",
+						"deleteData"
+					],
+					"query": [
+						{
+							"key": "type",
+							"value": "visitor"
+						},
+						{
+							"key": "customer",
+							"value": "insent"
+						},
+						{
+							"key": "key",
+							"value": "xyz@gmail.com"
+						}
+					]
+				},
+				"description": "delete a visitor record"
+			},
+			"response": []
+		},
+		{
+			"name": "delete user",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "286f573e-d815-4daa-bcfe-534df86172ec",
+						"exec": [
+							"pm.test(\"delete user\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://54.254.31.54:8080/dbservice/deleteData?type=user&customer=insent&key=xyz@gmail.com",
+					"protocol": "http",
+					"host": [
+						"54",
+						"254",
+						"31",
+						"54"
+					],
+					"port": "8080",
+					"path": [
+						"dbservice",
+						"deleteData"
+					],
+					"query": [
+						{
+							"key": "type",
+							"value": "user"
+						},
+						{
+							"key": "customer",
+							"value": "insent"
+						},
+						{
+							"key": "key",
+							"value": "xyz@gmail.com"
+						}
+					]
+				},
+				"description": "delete a user record"
+			},
+			"response": []
+		},
+		{
+			"name": "delete conversation",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "828ef745-e06b-45da-8835-1daad188d80a",
+						"exec": [
+							"pm.test(\"delete conversation\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://54.254.31.54:8080/dbservice/deleteData?type=conversation&customer=insent&key=welcome",
+					"protocol": "http",
+					"host": [
+						"54",
+						"254",
+						"31",
+						"54"
+					],
+					"port": "8080",
+					"path": [
+						"dbservice",
+						"deleteData"
+					],
+					"query": [
+						{
+							"key": "type",
+							"value": "conversation"
+						},
+						{
+							"key": "customer",
+							"value": "insent"
+						},
+						{
+							"key": "key",
+							"value": "welcome"
+						}
+					]
+				},
+				"description": "delete a conversation record"
+			},
+			"response": []
+		},
+		{
+			"name": "update user",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "85f0e57d-fd40-4df3-b002-fb642d418eb6",
+						"exec": [
+							"pm.test(\"update user\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://54.254.31.54:8080/dbservice/updateData?type=user&customer=insent&key=xyz@gmail.com&newdata={\"name\":\"test1\"}",
+					"protocol": "http",
+					"host": [
+						"54",
+						"254",
+						"31",
+						"54"
+					],
+					"port": "8080",
+					"path": [
+						"dbservice",
+						"updateData"
+					],
+					"query": [
+						{
+							"key": "type",
+							"value": "user"
+						},
+						{
+							"key": "customer",
+							"value": "insent"
+						},
+						{
+							"key": "key",
+							"value": "xyz@gmail.com"
+						},
+						{
+							"key": "newdata",
+							"value": "{\"name\":\"test1\"}"
+						}
+					]
+				},
+				"description": "update user detail"
+			},
+			"response": []
+		},
+		{
+			"name": "update visitor",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "a2142321-5830-4f21-8d75-d6ffbdea6079",
+						"exec": [
+							"pm.test(\"update visitor\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://54.254.31.54:8080/dbservice/updateData?type=visitor&customer=insent&key=xyz@gmail.com&newdata={\"company\":\"test1\"}",
+					"protocol": "http",
+					"host": [
+						"54",
+						"254",
+						"31",
+						"54"
+					],
+					"port": "8080",
+					"path": [
+						"dbservice",
+						"updateData"
+					],
+					"query": [
+						{
+							"key": "type",
+							"value": "visitor"
+						},
+						{
+							"key": "customer",
+							"value": "insent"
+						},
+						{
+							"key": "key",
+							"value": "xyz@gmail.com"
+						},
+						{
+							"key": "newdata",
+							"value": "{\"company\":\"test1\"}"
+						}
+					]
+				},
+				"description": "update visitor record"
+			},
+			"response": []
+		},
+		{
+			"name": "update conversation",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "75cf20da-bc20-4895-b0c7-6b453013c0df",
+						"exec": [
+							"pm.test(\"update conversation\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://54.254.31.54:8080/dbservice/updateData?type=conversation&customer=insent&key=welcome&newdata=\t{\"logs\": [{\n\t\t\"message\": \"hello\",\n\t\t\"senderId\": \"5349b4ddd2781d08c09890f9\",\n\t\t\"timestamp\": 123,\n\t\t\"senderType\": \"visitor\"\n\t}]}",
+					"protocol": "http",
+					"host": [
+						"54",
+						"254",
+						"31",
+						"54"
+					],
+					"port": "8080",
+					"path": [
+						"dbservice",
+						"updateData"
+					],
+					"query": [
+						{
+							"key": "type",
+							"value": "conversation"
+						},
+						{
+							"key": "customer",
+							"value": "insent"
+						},
+						{
+							"key": "key",
+							"value": "welcome"
+						},
+						{
+							"key": "newdata",
+							"value": "\t{\"logs\": [{\n\t\t\"message\": \"hello\",\n\t\t\"senderId\": \"5349b4ddd2781d08c09890f9\",\n\t\t\"timestamp\": 123,\n\t\t\"senderType\": \"visitor\"\n\t}]}"
+						}
+					]
+				},
+				"description": "update conversation record"
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
