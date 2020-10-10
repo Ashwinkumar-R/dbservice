@@ -25,6 +25,8 @@ class dbService {
         this.dbReconnectTimer = null; //db reconnection timer, used for reconnecting to DB
         this.appReady = false; // check application is initialized, (db connection should be ready)
 
+        this.enums = config.enums; //enum values
+
         //init logger
         let logParams = {
             level : this.options.log.level,
@@ -65,7 +67,7 @@ class dbService {
 
     //To check whether App is ready to process request to/from DB
     isAppReady() {
-        return this.appReady && this.dbHandler.isConnected()
+        return this.appReady && this.dbHandler.isConnected();
     }
 
     /**********************************
@@ -95,6 +97,38 @@ class dbService {
         }
     }
 
+    // send request to perform db related operations
+    async performDBOperation(params,operation) {
+        if (this.isAppReady()) {
+            switch (operation) {
+                case this.enums.operation.INSERT :
+                    var [err,res] = await to(this.dbHandler.insert(params));
+                    break;
+                case this.enums.operation.DELETE :
+                    var [err,res] = await to(this.dbHandler.delete(params));
+                    break;
+                case this.enums.operation.UPDATE :
+                    var [err,res] = await to(this.dbHandler.update(params));
+                    break;
+                case this.enums.operation.FIND :
+                    var [err,res] = await to(this.dbHandler.find(params));
+                    break;    
+            }
+
+            if (err) {
+                let msg = `Error performing DB operation, Error: ${err}`;
+                this.logger.debug(`performDBOperation: ${msg}`)
+                return {status: 'error', msg: msg};
+            } else {
+                return {status: 'ok'}
+            }
+        } else {
+            const msg = 'DB connection is not ready..';
+            this.logger.debug(`performDBOperation: ${msg}`);
+            return {status:'error', error:msg};
+        }
+    }
+
     /**********************************
         Init Express server and API
     ***********************************/
@@ -115,86 +149,60 @@ class dbService {
             .resolve(fn(req, res, next))
             .catch(next);
 
-        /* customers/DB endpoints */
-
-        router.post('/addCustomer', asyncExpHandler(async function (req,res,next) {
+        //
+        router.post('/insertData', asyncExpHandler(async function (req,res,next) {
             let args = req.body;
+            if (args) {
+                let output = await that.performDBOperation(args, that.enums.operation.INSERT);
+
+                if (output.status == 'ok') {
+                    let msg = `successfully executed`;
+                    res.status(200).send({result:'ok', msg:msg});    
+                } else {
+                    res.status(404).send({result:'error', msg:output.msg});
+                }
+            } else {
+                let msg = `empty arguments`;
+                res.status(400).send({result:'error', msg:msg});
+            }
         }))
 
-        router.post('/deleteCustomer', asyncExpHandler(async function (req,res,next) {
+        router.delete('/deleteData', asyncExpHandler(async function (req,res,next) {
             let args = req.body;
+            if (args) {
+                let output = that.performDBOperation(args, that.enums.operation.DELETE);
+
+                if (output.status == 'ok') {
+                    let msg = `successfully executed`;
+                    res.status(200).send({result:'ok', msg:msg});    
+                } else {
+                    res.status(404).send({result:'error', msg:output.msg});
+                }
+            } else {
+                let msg = `empty arguments`;
+                res.status(400).send({result:'error', msg:msg});
+            }
         }))
 
-        router.get('/getCustomer', asyncExpHandler(async function (req,res,next) {
+        router.put('/updateData', asyncExpHandler(async function (req,res,next) {
             let args = req.body;
+            if (args) {
+                let output = that.performDBOperation(args, that.enums.operation.UPDATE);
+
+                if (output.status == 'ok') {
+                    let msg = `successfully executed`;
+                    res.status(200).send({result:'ok', msg:msg});    
+                } else {
+                    res.status(404).send({result:'error', msg:output.msg});
+                }
+            } else {
+                let msg = `empty arguments`;
+                res.status(400).send({result:'error', msg:msg});
+            }
         }))
 
-        router.get('/getAllCustomers', asyncExpHandler(async function (req,res,next) {
-            let args = req.body;
-        }))
+        router.get('/findData', asyncExpHandler(async function (req,res,next) {
 
-        /* user/visitors endpoints */
-
-        router.post('/addUser', asyncExpHandler(async function (req,res,next) {
-            let args = req.body;
-        }))
-
-        router.post('/addVisitor', asyncExpHandler(async function (req,res,next) {
-            let args = req.body;
-        }))
-
-        router.post('/deleteUser', asyncExpHandler(async function (req,res,next) {
-            let args = req.body;
-        }))
-
-        router.post('/deleteVisitor', asyncExpHandler(async function (req,res,next) {
-            let args = req.body;
-        }))
-
-        router.post('/updateUser', asyncExpHandler(async function (req,res,next) {
-            let args = req.body;
-        }))
-
-        router.post('/updateVisitor', asyncExpHandler(async function (req,res,next) {
-            let args = req.body;
-        }))
-
-        router.get('/getUser', asyncExpHandler(async function (req,res,next) {
-            let args = req.body;
-        }))
-
-        router.get('/getAllUsers', asyncExpHandler(async function (req,res,next) {
-            let args = req.body;
-        }))
-
-        router.get('/getVisitor', asyncExpHandler(async function (req,res,next) {
-            let args = req.body;
-        }))
-
-        router.get('/getAllVisitors', asyncExpHandler(async function (req,res,next) {
-            let args = req.body;
-        }))
-
-        /* conversation endpoints */  
-
-        router.post('/addConversation', asyncExpHandler(async function (req,res,next) {
-            let args = req.body;
-        }))
-
-        router.post('/deleteConversation', asyncExpHandler(async function (req,res,next) {
-            let args = req.body;
-        }))
-
-        router.post('/updateConversation', asyncExpHandler(async function (req,res,next) {
-            let args = req.body;
-        }))
-
-        router.get('/getConversation', asyncExpHandler(async function (req,res,next) {
-            let args = req.body;
-        }))
-
-        router.get('/getAllConversation', asyncExpHandler(async function (req,res,next) {
-            let args = req.body;
         }))
 
         //middleware to handle errors
