@@ -168,9 +168,16 @@ class dbService {
         }))
 
         router.delete('/deleteData', asyncExpHandler(async function (req,res,next) {
-            let args = req.body;
-            if (args) {
-                let output = that.performDBOperation(args, that.enums.operation.DELETE);
+            if (!req.query && !req.query.type && !req.query.value) {
+                let msg = `required arguments are missing`;
+                res.status(400).send({result:'error', msg:msg});         
+            } else {
+                if(req.query.type != 'customer' && !req.query.customer) {
+                    let msg = `argument 'customer' is missing`;
+                    res.status(400).send({result:'error', msg:msg});           
+                }
+
+                let output = await that.performDBOperation(req.query, that.enums.operation.DELETE);
 
                 if (output.status == 'ok') {
                     let msg = `successfully executed`;
@@ -178,16 +185,13 @@ class dbService {
                 } else {
                     res.status(404).send({result:'error', msg:output.msg});
                 }
-            } else {
-                let msg = `empty arguments`;
-                res.status(400).send({result:'error', msg:msg});
             }
         }))
 
         router.put('/updateData', asyncExpHandler(async function (req,res,next) {
             let args = req.body;
             if (args) {
-                let output = that.performDBOperation(args, that.enums.operation.UPDATE);
+                let output = await that.performDBOperation(args, that.enums.operation.UPDATE);
 
                 if (output.status == 'ok') {
                     let msg = `successfully executed`;
