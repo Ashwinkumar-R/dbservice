@@ -73,7 +73,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\"type\":\"user\", \"customer\":\"insent\", \"data\":{\"email\":\"xyz@gmail.com\",\"password\":\"abc\",\"name\":\"abc\",\"image\":\"http://abc.com\"}}",
+					"raw": "{\"type\":\"user\", \"customer\":\"insent\", \"data\":{\"email\":\"xyz2@gmail.com\",\"password\":\"abc\",\"name\":\"abc1\",\"image\":\"http://abc.com\"}}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -167,7 +167,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\"type\":\"conversation\", \"customer\":\"insent\", \"data\" : { \"name\":\"welcome\", \"users\": [{\r\n\t\t\"userId\": 1,\r\n\t\t\"type\": \"user\"\r\n\t}],\r\n\t\"logs\": [{\r\n\t\t\"message\": \"hello\",\r\n\t\t\"senderId\": \"5349b4ddd2781d08c09890f4\",\r\n\t\t\"timestamp\": 123,\r\n\t\t\"senderType\": \"user\"\r\n\t}]\r\n}\r\n}\r\n",
+					"raw": "{\"type\":\"conversation\", \"customer\":\"insent\", \"data\" : { \"name\":\"welcome2\", \"users\": [{\r\n\t\t\"userId\": 2,\r\n\t\t\"type\": \"user\"\r\n\t}],\r\n\t\"logs\": [{\r\n\t\t\"message\": \"hello\",\r\n\t\t\"senderId\": \"5349b4ddd2781d08c09890f4\",\r\n\t\t\"timestamp\": 123,\r\n\t\t\"senderType\": \"user\"\r\n\t}]\r\n}\r\n}\r\n",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -898,6 +898,171 @@
 					]
 				},
 				"description": "get all conversation"
+			},
+			"response": []
+		},
+		{
+			"name": "aggregate on user",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "a4d7a951-e94d-423b-87cd-2c81e17943a0",
+						"exec": [
+							"pm.test(\"aggregate on user\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://54.254.31.54:8080/dbservice/findData?type=user&customer=insent&query=[{ \"$match\": { \"name\": \"abc\" }}, { \"$group\": { \"_id\": \"$email\" }}]&operation=aggregate",
+					"protocol": "http",
+					"host": [
+						"54",
+						"254",
+						"31",
+						"54"
+					],
+					"port": "8080",
+					"path": [
+						"dbservice",
+						"findData"
+					],
+					"query": [
+						{
+							"key": "type",
+							"value": "user"
+						},
+						{
+							"key": "customer",
+							"value": "insent"
+						},
+						{
+							"key": "query",
+							"value": "[{ \"$match\": { \"name\": \"abc\" }}, { \"$group\": { \"_id\": \"$email\" }}]"
+						},
+						{
+							"key": "operation",
+							"value": "aggregate"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "aggregate on visitor",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "a4d7a951-e94d-423b-87cd-2c81e17943a0",
+						"exec": [
+							"pm.test(\"aggregate of visitor\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://54.254.31.54:8080/dbservice/findData?type=visitor&customer=insent&query=[{ \"$match\": { \"name\": \"abc2\" }}, { \"$group\": { \"_id\": \"$company\" }}]&operation=aggregate",
+					"protocol": "http",
+					"host": [
+						"54",
+						"254",
+						"31",
+						"54"
+					],
+					"port": "8080",
+					"path": [
+						"dbservice",
+						"findData"
+					],
+					"query": [
+						{
+							"key": "type",
+							"value": "visitor"
+						},
+						{
+							"key": "customer",
+							"value": "insent"
+						},
+						{
+							"key": "query",
+							"value": "[{ \"$match\": { \"name\": \"abc2\" }}, { \"$group\": { \"_id\": \"$company\" }}]"
+						},
+						{
+							"key": "operation",
+							"value": "aggregate"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "aggregate on conversation",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "a4d7a951-e94d-423b-87cd-2c81e17943a0",
+						"exec": [
+							"pm.test(\"aggregate on conversation\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://54.254.31.54:8080/dbservice/findData?type=conversation&customer=insent&query=[{ \"$match\": { \"name\": \"welcome\" }}, { \"$group\": { \"_id\": \"$users\" }}]&operation=aggregate",
+					"protocol": "http",
+					"host": [
+						"54",
+						"254",
+						"31",
+						"54"
+					],
+					"port": "8080",
+					"path": [
+						"dbservice",
+						"findData"
+					],
+					"query": [
+						{
+							"key": "type",
+							"value": "conversation"
+						},
+						{
+							"key": "customer",
+							"value": "insent"
+						},
+						{
+							"key": "query",
+							"value": "[{ \"$match\": { \"name\": \"welcome\" }}, { \"$group\": { \"_id\": \"$users\" }}]"
+						},
+						{
+							"key": "operation",
+							"value": "aggregate"
+						}
+					]
+				}
 			},
 			"response": []
 		}
