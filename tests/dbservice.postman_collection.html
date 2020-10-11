@@ -1,0 +1,1615 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Free bootstrap documentation template">
+    <title>dbservice</title>
+    <!-- using online links -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://malihu.github.io/custom-scrollbar/jquery.mCustomScrollbar.min.css">
+    <!-- using local links -->
+    <link rel="stylesheet" href="css/main.min.css">
+    <link rel="stylesheet" href="css/sidebar-themes.min.css">
+    <link rel="stylesheet" href="css/bootstrap-treeview.min.css">
+    <link rel="stylesheet" href="css/postman.min.css">
+
+    <link rel="shortcut icon" type="image/png" href="img/favicon.png" /> </head>
+
+<body>
+    <div class="page-wrapper toggled light-theme">
+        <div class="modal dark-background" id="snippetModal" tabindex="-1" role="dialog" aria-labelledby="documentation-response-modal" style="display: none;">
+        <div class="modal-dialog" role="document">
+          <div class="modal-header">
+            <div class="title">Example Response</div>
+            <button type="button" class="close btn-circle" data-dismiss="modal" aria-label="Close">
+              <div>
+              <span id="closeModal" aria-hidden="true">×</span>
+              </div>
+            </button>
+          </div>
+          <div class="modal-content">
+            <div class="modal-body" style="width: 540.5px;">
+              <pre class="  language-javascript">
+                  <code class=" language-javascript"></code>
+              </pre>
+            </div>
+          </div>
+        </div>
+      </div>
+        <nav id="sidebar" class="sidebar-wrapper">
+            <div class="sidebar-content">
+                <!-- sidebar-brand  -->
+                <div class="sidebar-item sidebar-brand text-white font-weight-bold">API Documentation</div>
+                <!-- sidebar-header  -->
+                <!-- sidebar-menu  -->
+                <div class=" sidebar-item sidebar-menu">
+                    <div id="tree"></div>
+                </div>
+                <!-- sidebar-menu  -->
+            </div>
+        </nav>
+        <!-- page-content  -->
+        <main class="page-content">
+            <div id="overlay" class="overlay"></div>
+            <div class="container-fluid">
+                <div class="row d-flex align-items-center p-3 border-bottom">
+                    <div class="col-md-1">
+                        <a id="toggle-sidebar" class="btn rounded-0 p-3" href="#"> <i class="fas fa-bars"></i> </a>
+                    </div>
+                    <div class="col-md-9"></div>
+                    <div class="col-md-2 text-left">
+                    </div>
+                </div>
+                <div class="row p-lg-4">
+                    <article class="main-content col-md-12 pr-lg-9" id="doc-body">
+                        <div class="row row-no-padding row-eq-height">
+                            <div class="col-md-6 col-xs-12">
+                                <div class="api-information">
+                                    <div class="collection-name">
+                                        <p>dbservice</p>
+                                    </div>
+                                    <div class="collection-description">
+                                        <p></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row row-no-padding row-eq-height">
+                            <div class="col-md-6 col-xs-12 section">
+                                <div class="api-information" id="1">
+                                     <div class="heading">
+                                        <div class="name">
+                                            <span class="POST method" >POST</span>
+                                            add new customer <span class="lock-icon"></span>
+                                        </div>
+                                     </div>
+                                    <div class="url">http://54.254.31.54:8080/dbservice/insertData</div>
+                                    
+                                    <div class="description request-description">
+                                        <p>Add customer</p>
+                                    </div>
+                                    
+                                    <div class="request-body">
+                                        <div class="body-heading">BODY <span class="body-type">raw</span></div>
+                                        <hr>
+                                            <div class="raw-body code-snippet">
+                                              <pre class="body-block click-to-expand-wrapper is-snippet-wrapper " data-title="add new customer">
+                                                  <code>
+                                                    
+{"type":"customer", "name":"insent"}
+                                                  </code>
+                                              </pre>
+                                            </div>
+                                        
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-xs-12 examples">
+                                <div class="sample-request">
+                                    <div class="heading">
+                                        <span>Example Request</span>
+                                    </div>
+                                    <div class="responses-index">
+                                        <div class="dropdown response-name">
+                                            <button class="btn   responses-dropdown truncate" type="button" id="f678f251-1750-4e3a-b5d8-05b4c6b0fb37_dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                              <span id="selected" class="response-name-label">add new customer</span>
+                                                <span class="caret"></span>
+
+                                            </button>
+
+                                            <ul class="dropdown-menu" aria-labelledby="f678f251-1750-4e3a-b5d8-05b4c6b0fb37_dropdown">
+                                                <li class="truncate" data-request-info="1" data-response-info="response_1">add new customer</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="formatted-requests " data-request-id="1"  data-id="response_1">
+                                    <div class="request code-snippet">
+                                        <div>
+                                            <pre class="click-to-expand-wrapper is-snippet-wrapper " data-title="add new customer">
+                                                <code class="is-highlighted">
+POST http://54.254.31.54:8080/dbservice/insertData
+
+{"type":"customer", "name":"insent"}</code>
+                                            </pre>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <div class="row row-no-padding row-eq-height">
+                            <div class="col-md-6 col-xs-12 section">
+                                <div class="api-information" id="2">
+                                     <div class="heading">
+                                        <div class="name">
+                                            <span class="POST method" >POST</span>
+                                            insert user <span class="lock-icon"></span>
+                                        </div>
+                                     </div>
+                                    <div class="url">http://54.254.31.54:8080/dbservice/insertData</div>
+                                    
+                                    <div class="description request-description">
+                                        <p>insert user data</p>
+                                    </div>
+                                    
+                                    <div class="request-body">
+                                        <div class="body-heading">BODY <span class="body-type">raw</span></div>
+                                        <hr>
+                                            <div class="raw-body code-snippet">
+                                              <pre class="body-block click-to-expand-wrapper is-snippet-wrapper " data-title="insert user">
+                                                  <code>
+                                                    
+{"type":"user", "customer":"insent", "data":{"email":"xyz2@gmail.com","password":"abc","name":"abc1","image":"http://abc.com"}}
+                                                  </code>
+                                              </pre>
+                                            </div>
+                                        
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-xs-12 examples">
+                                <div class="sample-request">
+                                    <div class="heading">
+                                        <span>Example Request</span>
+                                    </div>
+                                    <div class="responses-index">
+                                        <div class="dropdown response-name">
+                                            <button class="btn   responses-dropdown truncate" type="button" id="f678f251-1750-4e3a-b5d8-05b4c6b0fb37_dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                              <span id="selected" class="response-name-label">insert user</span>
+                                                <span class="caret"></span>
+
+                                            </button>
+
+                                            <ul class="dropdown-menu" aria-labelledby="f678f251-1750-4e3a-b5d8-05b4c6b0fb37_dropdown">
+                                                <li class="truncate" data-request-info="2" data-response-info="response_2">insert user</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="formatted-requests " data-request-id="2"  data-id="response_2">
+                                    <div class="request code-snippet">
+                                        <div>
+                                            <pre class="click-to-expand-wrapper is-snippet-wrapper " data-title="insert user">
+                                                <code class="is-highlighted">
+POST http://54.254.31.54:8080/dbservice/insertData
+
+{"type":"user", "customer":"insent", "data":{"email":"xyz2@gmail.com","password":"abc","name":"abc1","image":"http://abc.com"}}</code>
+                                            </pre>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <div class="row row-no-padding row-eq-height">
+                            <div class="col-md-6 col-xs-12 section">
+                                <div class="api-information" id="3">
+                                     <div class="heading">
+                                        <div class="name">
+                                            <span class="POST method" >POST</span>
+                                            insert visitor <span class="lock-icon"></span>
+                                        </div>
+                                     </div>
+                                    <div class="url">http://54.254.31.54:8080/dbservice/insertData</div>
+                                    
+                                    <div class="description request-description">
+                                        <p>insert new visitor</p>
+                                    </div>
+                                    
+                                    <div class="request-body">
+                                        <div class="body-heading">BODY <span class="body-type">raw</span></div>
+                                        <hr>
+                                            <div class="raw-body code-snippet">
+                                              <pre class="body-block click-to-expand-wrapper is-snippet-wrapper " data-title="insert visitor">
+                                                  <code>
+                                                    
+{"type":"visitor", "customer":"insent", "data":{"email":"xyz@gmail.com","company":"abc","name":"abc","image":"http://abc.com"}}
+                                                  </code>
+                                              </pre>
+                                            </div>
+                                        
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-xs-12 examples">
+                                <div class="sample-request">
+                                    <div class="heading">
+                                        <span>Example Request</span>
+                                    </div>
+                                    <div class="responses-index">
+                                        <div class="dropdown response-name">
+                                            <button class="btn   responses-dropdown truncate" type="button" id="f678f251-1750-4e3a-b5d8-05b4c6b0fb37_dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                              <span id="selected" class="response-name-label">insert visitor</span>
+                                                <span class="caret"></span>
+
+                                            </button>
+
+                                            <ul class="dropdown-menu" aria-labelledby="f678f251-1750-4e3a-b5d8-05b4c6b0fb37_dropdown">
+                                                <li class="truncate" data-request-info="3" data-response-info="response_3">insert visitor</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="formatted-requests " data-request-id="3"  data-id="response_3">
+                                    <div class="request code-snippet">
+                                        <div>
+                                            <pre class="click-to-expand-wrapper is-snippet-wrapper " data-title="insert visitor">
+                                                <code class="is-highlighted">
+POST http://54.254.31.54:8080/dbservice/insertData
+
+{"type":"visitor", "customer":"insent", "data":{"email":"xyz@gmail.com","company":"abc","name":"abc","image":"http://abc.com"}}</code>
+                                            </pre>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <div class="row row-no-padding row-eq-height">
+                            <div class="col-md-6 col-xs-12 section">
+                                <div class="api-information" id="4">
+                                     <div class="heading">
+                                        <div class="name">
+                                            <span class="POST method" >POST</span>
+                                            insert conversation <span class="lock-icon"></span>
+                                        </div>
+                                     </div>
+                                    <div class="url">http://54.254.31.54:8080/dbservice/insertData</div>
+                                    
+                                    <div class="description request-description">
+                                        <p>insert conversation</p>
+                                    </div>
+                                    
+                                    <div class="request-body">
+                                        <div class="body-heading">BODY <span class="body-type">raw</span></div>
+                                        <hr>
+                                            <div class="raw-body code-snippet">
+                                              <pre class="body-block click-to-expand-wrapper is-snippet-wrapper is-expandable" data-title="insert conversation">
+                                                  <code>
+                                                    
+{"type":"conversation", "customer":"insent", "data" : { "name":"welcome2", "users": [{
+		"userId": 2,
+		"type": "user"
+	}],
+	"logs": [{
+		"message": "hello",
+		"senderId": "5349b4ddd2781d08c09890f4",
+		"timestamp": 123,
+		"senderType": "user"
+	}]
+}
+}
+                                                  </code>
+                                              </pre>
+                                            </div>
+                                        
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-xs-12 examples">
+                                <div class="sample-request">
+                                    <div class="heading">
+                                        <span>Example Request</span>
+                                    </div>
+                                    <div class="responses-index">
+                                        <div class="dropdown response-name">
+                                            <button class="btn   responses-dropdown truncate" type="button" id="f678f251-1750-4e3a-b5d8-05b4c6b0fb37_dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                              <span id="selected" class="response-name-label">insert conversation</span>
+                                                <span class="caret"></span>
+
+                                            </button>
+
+                                            <ul class="dropdown-menu" aria-labelledby="f678f251-1750-4e3a-b5d8-05b4c6b0fb37_dropdown">
+                                                <li class="truncate" data-request-info="4" data-response-info="response_4">insert conversation</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="formatted-requests " data-request-id="4"  data-id="response_4">
+                                    <div class="request code-snippet">
+                                        <div>
+                                            <pre class="click-to-expand-wrapper is-snippet-wrapper is-expandable" data-title="insert conversation">
+                                                <code class="is-highlighted">
+POST http://54.254.31.54:8080/dbservice/insertData
+
+{"type":"conversation", "customer":"insent", "data" : { "name":"welcome2", "users": [{
+		"userId": 2,
+		"type": "user"
+	}],
+	"logs": [{
+		"message": "hello",
+		"senderId": "5349b4ddd2781d08c09890f4",
+		"timestamp": 123,
+		"senderType": "user"
+	}]
+}
+}</code>
+                                            </pre>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <div class="row row-no-padding row-eq-height">
+                            <div class="col-md-6 col-xs-12 section">
+                                <div class="api-information" id="5">
+                                     <div class="heading">
+                                        <div class="name">
+                                            <span class="DELETE method" >DELETE</span>
+                                            delete customer <span class="lock-icon"></span>
+                                        </div>
+                                     </div>
+                                    <div class="url">http://54.254.31.54:8080/dbservice/deleteData?type=customer&key=insent</div>
+                                    
+                                    <div class="description request-description">
+                                        <p>delete customer db</p>
+                                    </div>
+                                    
+                                    <div class="request-body">
+                                        <div class="body-heading">PARAMS</div>
+                                        <hr>
+                                          <div class="param row">
+                                            <div class="name col-md-3 col-xs-12">type</div>
+                                            <div class="value col-md-9 col-xs-12">customer</div>
+                                            <div class="description col-md-9 col-xs-12"><p>None</p>
+                                            </div>
+                                          </div>
+                                          <div class="param row">
+                                            <div class="name col-md-3 col-xs-12">key</div>
+                                            <div class="value col-md-9 col-xs-12">insent</div>
+                                            <div class="description col-md-9 col-xs-12"><p>None</p>
+                                            </div>
+                                          </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-xs-12 examples">
+                                <div class="sample-request">
+                                    <div class="heading">
+                                        <span>Example Request</span>
+                                    </div>
+                                    <div class="responses-index">
+                                        <div class="dropdown response-name">
+                                            <button class="btn   responses-dropdown truncate" type="button" id="f678f251-1750-4e3a-b5d8-05b4c6b0fb37_dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                              <span id="selected" class="response-name-label">delete customer</span>
+                                                <span class="caret"></span>
+
+                                            </button>
+
+                                            <ul class="dropdown-menu" aria-labelledby="f678f251-1750-4e3a-b5d8-05b4c6b0fb37_dropdown">
+                                                <li class="truncate" data-request-info="5" data-response-info="response_5">delete customer</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="formatted-requests " data-request-id="5"  data-id="response_5">
+                                    <div class="request code-snippet">
+                                        <div>
+                                            <pre class="click-to-expand-wrapper is-snippet-wrapper " data-title="delete customer">
+                                                <code class="is-highlighted">
+DELETE http://54.254.31.54:8080/dbservice/deleteData?type=customer&key=insent</code>
+                                            </pre>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <div class="row row-no-padding row-eq-height">
+                            <div class="col-md-6 col-xs-12 section">
+                                <div class="api-information" id="6">
+                                     <div class="heading">
+                                        <div class="name">
+                                            <span class="DELETE method" >DELETE</span>
+                                            delete visitor <span class="lock-icon"></span>
+                                        </div>
+                                     </div>
+                                    <div class="url">http://54.254.31.54:8080/dbservice/deleteData?type=visitor&customer=insent&key=xyz@gmail.com</div>
+                                    
+                                    <div class="description request-description">
+                                        <p>delete a visitor record</p>
+                                    </div>
+                                    
+                                    <div class="request-body">
+                                        <div class="body-heading">PARAMS</div>
+                                        <hr>
+                                          <div class="param row">
+                                            <div class="name col-md-3 col-xs-12">type</div>
+                                            <div class="value col-md-9 col-xs-12">visitor</div>
+                                            <div class="description col-md-9 col-xs-12"><p>None</p>
+                                            </div>
+                                          </div>
+                                          <div class="param row">
+                                            <div class="name col-md-3 col-xs-12">customer</div>
+                                            <div class="value col-md-9 col-xs-12">insent</div>
+                                            <div class="description col-md-9 col-xs-12"><p>None</p>
+                                            </div>
+                                          </div>
+                                          <div class="param row">
+                                            <div class="name col-md-3 col-xs-12">key</div>
+                                            <div class="value col-md-9 col-xs-12">xyz@gmail.com</div>
+                                            <div class="description col-md-9 col-xs-12"><p>None</p>
+                                            </div>
+                                          </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-xs-12 examples">
+                                <div class="sample-request">
+                                    <div class="heading">
+                                        <span>Example Request</span>
+                                    </div>
+                                    <div class="responses-index">
+                                        <div class="dropdown response-name">
+                                            <button class="btn   responses-dropdown truncate" type="button" id="f678f251-1750-4e3a-b5d8-05b4c6b0fb37_dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                              <span id="selected" class="response-name-label">delete visitor</span>
+                                                <span class="caret"></span>
+
+                                            </button>
+
+                                            <ul class="dropdown-menu" aria-labelledby="f678f251-1750-4e3a-b5d8-05b4c6b0fb37_dropdown">
+                                                <li class="truncate" data-request-info="6" data-response-info="response_6">delete visitor</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="formatted-requests " data-request-id="6"  data-id="response_6">
+                                    <div class="request code-snippet">
+                                        <div>
+                                            <pre class="click-to-expand-wrapper is-snippet-wrapper " data-title="delete visitor">
+                                                <code class="is-highlighted">
+DELETE http://54.254.31.54:8080/dbservice/deleteData?type=visitor&customer=insent&key=xyz@gmail.com</code>
+                                            </pre>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <div class="row row-no-padding row-eq-height">
+                            <div class="col-md-6 col-xs-12 section">
+                                <div class="api-information" id="7">
+                                     <div class="heading">
+                                        <div class="name">
+                                            <span class="DELETE method" >DELETE</span>
+                                            delete user <span class="lock-icon"></span>
+                                        </div>
+                                     </div>
+                                    <div class="url">http://54.254.31.54:8080/dbservice/deleteData?type=user&customer=insent&key=xyz@gmail.com</div>
+                                    
+                                    <div class="description request-description">
+                                        <p>delete a user record</p>
+                                    </div>
+                                    
+                                    <div class="request-body">
+                                        <div class="body-heading">PARAMS</div>
+                                        <hr>
+                                          <div class="param row">
+                                            <div class="name col-md-3 col-xs-12">type</div>
+                                            <div class="value col-md-9 col-xs-12">user</div>
+                                            <div class="description col-md-9 col-xs-12"><p>None</p>
+                                            </div>
+                                          </div>
+                                          <div class="param row">
+                                            <div class="name col-md-3 col-xs-12">customer</div>
+                                            <div class="value col-md-9 col-xs-12">insent</div>
+                                            <div class="description col-md-9 col-xs-12"><p>None</p>
+                                            </div>
+                                          </div>
+                                          <div class="param row">
+                                            <div class="name col-md-3 col-xs-12">key</div>
+                                            <div class="value col-md-9 col-xs-12">xyz@gmail.com</div>
+                                            <div class="description col-md-9 col-xs-12"><p>None</p>
+                                            </div>
+                                          </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-xs-12 examples">
+                                <div class="sample-request">
+                                    <div class="heading">
+                                        <span>Example Request</span>
+                                    </div>
+                                    <div class="responses-index">
+                                        <div class="dropdown response-name">
+                                            <button class="btn   responses-dropdown truncate" type="button" id="f678f251-1750-4e3a-b5d8-05b4c6b0fb37_dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                              <span id="selected" class="response-name-label">delete user</span>
+                                                <span class="caret"></span>
+
+                                            </button>
+
+                                            <ul class="dropdown-menu" aria-labelledby="f678f251-1750-4e3a-b5d8-05b4c6b0fb37_dropdown">
+                                                <li class="truncate" data-request-info="7" data-response-info="response_7">delete user</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="formatted-requests " data-request-id="7"  data-id="response_7">
+                                    <div class="request code-snippet">
+                                        <div>
+                                            <pre class="click-to-expand-wrapper is-snippet-wrapper " data-title="delete user">
+                                                <code class="is-highlighted">
+DELETE http://54.254.31.54:8080/dbservice/deleteData?type=user&customer=insent&key=xyz@gmail.com</code>
+                                            </pre>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <div class="row row-no-padding row-eq-height">
+                            <div class="col-md-6 col-xs-12 section">
+                                <div class="api-information" id="8">
+                                     <div class="heading">
+                                        <div class="name">
+                                            <span class="DELETE method" >DELETE</span>
+                                            delete conversation <span class="lock-icon"></span>
+                                        </div>
+                                     </div>
+                                    <div class="url">http://54.254.31.54:8080/dbservice/deleteData?type=conversation&customer=insent&key=welcome</div>
+                                    
+                                    <div class="description request-description">
+                                        <p>delete a conversation record</p>
+                                    </div>
+                                    
+                                    <div class="request-body">
+                                        <div class="body-heading">PARAMS</div>
+                                        <hr>
+                                          <div class="param row">
+                                            <div class="name col-md-3 col-xs-12">type</div>
+                                            <div class="value col-md-9 col-xs-12">conversation</div>
+                                            <div class="description col-md-9 col-xs-12"><p>None</p>
+                                            </div>
+                                          </div>
+                                          <div class="param row">
+                                            <div class="name col-md-3 col-xs-12">customer</div>
+                                            <div class="value col-md-9 col-xs-12">insent</div>
+                                            <div class="description col-md-9 col-xs-12"><p>None</p>
+                                            </div>
+                                          </div>
+                                          <div class="param row">
+                                            <div class="name col-md-3 col-xs-12">key</div>
+                                            <div class="value col-md-9 col-xs-12">welcome</div>
+                                            <div class="description col-md-9 col-xs-12"><p>None</p>
+                                            </div>
+                                          </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-xs-12 examples">
+                                <div class="sample-request">
+                                    <div class="heading">
+                                        <span>Example Request</span>
+                                    </div>
+                                    <div class="responses-index">
+                                        <div class="dropdown response-name">
+                                            <button class="btn   responses-dropdown truncate" type="button" id="f678f251-1750-4e3a-b5d8-05b4c6b0fb37_dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                              <span id="selected" class="response-name-label">delete conversation</span>
+                                                <span class="caret"></span>
+
+                                            </button>
+
+                                            <ul class="dropdown-menu" aria-labelledby="f678f251-1750-4e3a-b5d8-05b4c6b0fb37_dropdown">
+                                                <li class="truncate" data-request-info="8" data-response-info="response_8">delete conversation</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="formatted-requests " data-request-id="8"  data-id="response_8">
+                                    <div class="request code-snippet">
+                                        <div>
+                                            <pre class="click-to-expand-wrapper is-snippet-wrapper " data-title="delete conversation">
+                                                <code class="is-highlighted">
+DELETE http://54.254.31.54:8080/dbservice/deleteData?type=conversation&customer=insent&key=welcome</code>
+                                            </pre>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <div class="row row-no-padding row-eq-height">
+                            <div class="col-md-6 col-xs-12 section">
+                                <div class="api-information" id="9">
+                                     <div class="heading">
+                                        <div class="name">
+                                            <span class="PUT method" >PUT</span>
+                                            update user <span class="lock-icon"></span>
+                                        </div>
+                                     </div>
+                                    <div class="url">http://54.254.31.54:8080/dbservice/updateData?type=user&customer=insent&key=xyz@gmail.com&newdata={"name":"test1"}</div>
+                                    
+                                    <div class="description request-description">
+                                        <p>update user detail</p>
+                                    </div>
+                                    
+                                    <div class="request-body">
+                                        <div class="body-heading">PARAMS</div>
+                                        <hr>
+                                          <div class="param row">
+                                            <div class="name col-md-3 col-xs-12">type</div>
+                                            <div class="value col-md-9 col-xs-12">user</div>
+                                            <div class="description col-md-9 col-xs-12"><p>None</p>
+                                            </div>
+                                          </div>
+                                          <div class="param row">
+                                            <div class="name col-md-3 col-xs-12">customer</div>
+                                            <div class="value col-md-9 col-xs-12">insent</div>
+                                            <div class="description col-md-9 col-xs-12"><p>None</p>
+                                            </div>
+                                          </div>
+                                          <div class="param row">
+                                            <div class="name col-md-3 col-xs-12">key</div>
+                                            <div class="value col-md-9 col-xs-12">xyz@gmail.com</div>
+                                            <div class="description col-md-9 col-xs-12"><p>None</p>
+                                            </div>
+                                          </div>
+                                          <div class="param row">
+                                            <div class="name col-md-3 col-xs-12">newdata</div>
+                                            <div class="value col-md-9 col-xs-12">{\"name\":\"test1\"}</div>
+                                            <div class="description col-md-9 col-xs-12"><p>None</p>
+                                            </div>
+                                          </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-xs-12 examples">
+                                <div class="sample-request">
+                                    <div class="heading">
+                                        <span>Example Request</span>
+                                    </div>
+                                    <div class="responses-index">
+                                        <div class="dropdown response-name">
+                                            <button class="btn   responses-dropdown truncate" type="button" id="f678f251-1750-4e3a-b5d8-05b4c6b0fb37_dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                              <span id="selected" class="response-name-label">update user</span>
+                                                <span class="caret"></span>
+
+                                            </button>
+
+                                            <ul class="dropdown-menu" aria-labelledby="f678f251-1750-4e3a-b5d8-05b4c6b0fb37_dropdown">
+                                                <li class="truncate" data-request-info="9" data-response-info="response_9">update user</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="formatted-requests " data-request-id="9"  data-id="response_9">
+                                    <div class="request code-snippet">
+                                        <div>
+                                            <pre class="click-to-expand-wrapper is-snippet-wrapper " data-title="update user">
+                                                <code class="is-highlighted">
+PUT http://54.254.31.54:8080/dbservice/updateData?type=user&customer=insent&key=xyz@gmail.com&newdata={"name":"test1"}</code>
+                                            </pre>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <div class="row row-no-padding row-eq-height">
+                            <div class="col-md-6 col-xs-12 section">
+                                <div class="api-information" id="10">
+                                     <div class="heading">
+                                        <div class="name">
+                                            <span class="PUT method" >PUT</span>
+                                            update visitor <span class="lock-icon"></span>
+                                        </div>
+                                     </div>
+                                    <div class="url">http://54.254.31.54:8080/dbservice/updateData?type=visitor&customer=insent&key=xyz@gmail.com&newdata={"company":"test1"}</div>
+                                    
+                                    <div class="description request-description">
+                                        <p>update visitor record</p>
+                                    </div>
+                                    
+                                    <div class="request-body">
+                                        <div class="body-heading">PARAMS</div>
+                                        <hr>
+                                          <div class="param row">
+                                            <div class="name col-md-3 col-xs-12">type</div>
+                                            <div class="value col-md-9 col-xs-12">visitor</div>
+                                            <div class="description col-md-9 col-xs-12"><p>None</p>
+                                            </div>
+                                          </div>
+                                          <div class="param row">
+                                            <div class="name col-md-3 col-xs-12">customer</div>
+                                            <div class="value col-md-9 col-xs-12">insent</div>
+                                            <div class="description col-md-9 col-xs-12"><p>None</p>
+                                            </div>
+                                          </div>
+                                          <div class="param row">
+                                            <div class="name col-md-3 col-xs-12">key</div>
+                                            <div class="value col-md-9 col-xs-12">xyz@gmail.com</div>
+                                            <div class="description col-md-9 col-xs-12"><p>None</p>
+                                            </div>
+                                          </div>
+                                          <div class="param row">
+                                            <div class="name col-md-3 col-xs-12">newdata</div>
+                                            <div class="value col-md-9 col-xs-12">{\"company\":\"test1\"}</div>
+                                            <div class="description col-md-9 col-xs-12"><p>None</p>
+                                            </div>
+                                          </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-xs-12 examples">
+                                <div class="sample-request">
+                                    <div class="heading">
+                                        <span>Example Request</span>
+                                    </div>
+                                    <div class="responses-index">
+                                        <div class="dropdown response-name">
+                                            <button class="btn   responses-dropdown truncate" type="button" id="f678f251-1750-4e3a-b5d8-05b4c6b0fb37_dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                              <span id="selected" class="response-name-label">update visitor</span>
+                                                <span class="caret"></span>
+
+                                            </button>
+
+                                            <ul class="dropdown-menu" aria-labelledby="f678f251-1750-4e3a-b5d8-05b4c6b0fb37_dropdown">
+                                                <li class="truncate" data-request-info="10" data-response-info="response_10">update visitor</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="formatted-requests " data-request-id="10"  data-id="response_10">
+                                    <div class="request code-snippet">
+                                        <div>
+                                            <pre class="click-to-expand-wrapper is-snippet-wrapper " data-title="update visitor">
+                                                <code class="is-highlighted">
+PUT http://54.254.31.54:8080/dbservice/updateData?type=visitor&customer=insent&key=xyz@gmail.com&newdata={"company":"test1"}</code>
+                                            </pre>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <div class="row row-no-padding row-eq-height">
+                            <div class="col-md-6 col-xs-12 section">
+                                <div class="api-information" id="11">
+                                     <div class="heading">
+                                        <div class="name">
+                                            <span class="PUT method" >PUT</span>
+                                            update conversation <span class="lock-icon"></span>
+                                        </div>
+                                     </div>
+                                    <div class="url">http://54.254.31.54:8080/dbservice/updateData?type=conversation&customer=insent&key=welcome&newdata=	{"logs": [{
+		"message": "hello",
+		"senderId": "5349b4ddd2781d08c09890f9",
+		"timestamp": 123,
+		"senderType": "visitor"
+	}]}</div>
+                                    
+                                    <div class="description request-description">
+                                        <p>update conversation record</p>
+                                    </div>
+                                    
+                                    <div class="request-body">
+                                        <div class="body-heading">PARAMS</div>
+                                        <hr>
+                                          <div class="param row">
+                                            <div class="name col-md-3 col-xs-12">type</div>
+                                            <div class="value col-md-9 col-xs-12">conversation</div>
+                                            <div class="description col-md-9 col-xs-12"><p>None</p>
+                                            </div>
+                                          </div>
+                                          <div class="param row">
+                                            <div class="name col-md-3 col-xs-12">customer</div>
+                                            <div class="value col-md-9 col-xs-12">insent</div>
+                                            <div class="description col-md-9 col-xs-12"><p>None</p>
+                                            </div>
+                                          </div>
+                                          <div class="param row">
+                                            <div class="name col-md-3 col-xs-12">key</div>
+                                            <div class="value col-md-9 col-xs-12">welcome</div>
+                                            <div class="description col-md-9 col-xs-12"><p>None</p>
+                                            </div>
+                                          </div>
+                                          <div class="param row">
+                                            <div class="name col-md-3 col-xs-12">newdata</div>
+                                            <div class="value col-md-9 col-xs-12">	{\"logs\": [{
+		\"message\": \"hello\",
+		\"senderId\": \"5349b4ddd2781d08c09890f9\",
+		\"timestamp\": 123,
+		\"senderType\": \"visitor\"
+	}]}</div>
+                                            <div class="description col-md-9 col-xs-12"><p>None</p>
+                                            </div>
+                                          </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-xs-12 examples">
+                                <div class="sample-request">
+                                    <div class="heading">
+                                        <span>Example Request</span>
+                                    </div>
+                                    <div class="responses-index">
+                                        <div class="dropdown response-name">
+                                            <button class="btn   responses-dropdown truncate" type="button" id="f678f251-1750-4e3a-b5d8-05b4c6b0fb37_dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                              <span id="selected" class="response-name-label">update conversation</span>
+                                                <span class="caret"></span>
+
+                                            </button>
+
+                                            <ul class="dropdown-menu" aria-labelledby="f678f251-1750-4e3a-b5d8-05b4c6b0fb37_dropdown">
+                                                <li class="truncate" data-request-info="11" data-response-info="response_11">update conversation</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="formatted-requests " data-request-id="11"  data-id="response_11">
+                                    <div class="request code-snippet">
+                                        <div>
+                                            <pre class="click-to-expand-wrapper is-snippet-wrapper is-expandable" data-title="update conversation">
+                                                <code class="is-highlighted">
+PUT http://54.254.31.54:8080/dbservice/updateData?type=conversation&customer=insent&key=welcome&newdata=	{"logs": [{
+		"message": "hello",
+		"senderId": "5349b4ddd2781d08c09890f9",
+		"timestamp": 123,
+		"senderType": "visitor"
+	}]}</code>
+                                            </pre>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <div class="row row-no-padding row-eq-height">
+                            <div class="col-md-6 col-xs-12 section">
+                                <div class="api-information" id="12">
+                                     <div class="heading">
+                                        <div class="name">
+                                            <span class="GET method" >GET</span>
+                                            get user <span class="lock-icon"></span>
+                                        </div>
+                                     </div>
+                                    <div class="url">http://54.254.31.54:8080/dbservice/findData?type=user&customer=insent&query={"name":"abc"}&document=single</div>
+                                    
+                                    <div class="description request-description">
+                                        <p>get a user</p>
+                                    </div>
+                                    
+                                    <div class="request-body">
+                                        <div class="body-heading">PARAMS</div>
+                                        <hr>
+                                          <div class="param row">
+                                            <div class="name col-md-3 col-xs-12">type</div>
+                                            <div class="value col-md-9 col-xs-12">user</div>
+                                            <div class="description col-md-9 col-xs-12"><p>None</p>
+                                            </div>
+                                          </div>
+                                          <div class="param row">
+                                            <div class="name col-md-3 col-xs-12">customer</div>
+                                            <div class="value col-md-9 col-xs-12">insent</div>
+                                            <div class="description col-md-9 col-xs-12"><p>None</p>
+                                            </div>
+                                          </div>
+                                          <div class="param row">
+                                            <div class="name col-md-3 col-xs-12">query</div>
+                                            <div class="value col-md-9 col-xs-12">{\"name\":\"abc\"}</div>
+                                            <div class="description col-md-9 col-xs-12"><p>None</p>
+                                            </div>
+                                          </div>
+                                          <div class="param row">
+                                            <div class="name col-md-3 col-xs-12">document</div>
+                                            <div class="value col-md-9 col-xs-12">single</div>
+                                            <div class="description col-md-9 col-xs-12"><p>None</p>
+                                            </div>
+                                          </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-xs-12 examples">
+                                <div class="sample-request">
+                                    <div class="heading">
+                                        <span>Example Request</span>
+                                    </div>
+                                    <div class="responses-index">
+                                        <div class="dropdown response-name">
+                                            <button class="btn   responses-dropdown truncate" type="button" id="f678f251-1750-4e3a-b5d8-05b4c6b0fb37_dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                              <span id="selected" class="response-name-label">get user</span>
+                                                <span class="caret"></span>
+
+                                            </button>
+
+                                            <ul class="dropdown-menu" aria-labelledby="f678f251-1750-4e3a-b5d8-05b4c6b0fb37_dropdown">
+                                                <li class="truncate" data-request-info="12" data-response-info="response_12">get user</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="formatted-requests " data-request-id="12"  data-id="response_12">
+                                    <div class="request code-snippet">
+                                        <div>
+                                            <pre class="click-to-expand-wrapper is-snippet-wrapper " data-title="get user">
+                                                <code class="is-highlighted">
+GET http://54.254.31.54:8080/dbservice/findData?type=user&customer=insent&query={"name":"abc"}&document=single</code>
+                                            </pre>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <div class="row row-no-padding row-eq-height">
+                            <div class="col-md-6 col-xs-12 section">
+                                <div class="api-information" id="13">
+                                     <div class="heading">
+                                        <div class="name">
+                                            <span class="GET method" >GET</span>
+                                            get visitor <span class="lock-icon"></span>
+                                        </div>
+                                     </div>
+                                    <div class="url">http://54.254.31.54:8080/dbservice/findData?type=visitor&customer=insent&query={"name":"abc"}&document=single</div>
+                                    
+                                    <div class="description request-description">
+                                        <p>get a visitor</p>
+                                    </div>
+                                    
+                                    <div class="request-body">
+                                        <div class="body-heading">PARAMS</div>
+                                        <hr>
+                                          <div class="param row">
+                                            <div class="name col-md-3 col-xs-12">type</div>
+                                            <div class="value col-md-9 col-xs-12">visitor</div>
+                                            <div class="description col-md-9 col-xs-12"><p>None</p>
+                                            </div>
+                                          </div>
+                                          <div class="param row">
+                                            <div class="name col-md-3 col-xs-12">customer</div>
+                                            <div class="value col-md-9 col-xs-12">insent</div>
+                                            <div class="description col-md-9 col-xs-12"><p>None</p>
+                                            </div>
+                                          </div>
+                                          <div class="param row">
+                                            <div class="name col-md-3 col-xs-12">query</div>
+                                            <div class="value col-md-9 col-xs-12">{\"name\":\"abc\"}</div>
+                                            <div class="description col-md-9 col-xs-12"><p>None</p>
+                                            </div>
+                                          </div>
+                                          <div class="param row">
+                                            <div class="name col-md-3 col-xs-12">document</div>
+                                            <div class="value col-md-9 col-xs-12">single</div>
+                                            <div class="description col-md-9 col-xs-12"><p>None</p>
+                                            </div>
+                                          </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-xs-12 examples">
+                                <div class="sample-request">
+                                    <div class="heading">
+                                        <span>Example Request</span>
+                                    </div>
+                                    <div class="responses-index">
+                                        <div class="dropdown response-name">
+                                            <button class="btn   responses-dropdown truncate" type="button" id="f678f251-1750-4e3a-b5d8-05b4c6b0fb37_dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                              <span id="selected" class="response-name-label">get visitor</span>
+                                                <span class="caret"></span>
+
+                                            </button>
+
+                                            <ul class="dropdown-menu" aria-labelledby="f678f251-1750-4e3a-b5d8-05b4c6b0fb37_dropdown">
+                                                <li class="truncate" data-request-info="13" data-response-info="response_13">get visitor</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="formatted-requests " data-request-id="13"  data-id="response_13">
+                                    <div class="request code-snippet">
+                                        <div>
+                                            <pre class="click-to-expand-wrapper is-snippet-wrapper " data-title="get visitor">
+                                                <code class="is-highlighted">
+GET http://54.254.31.54:8080/dbservice/findData?type=visitor&customer=insent&query={"name":"abc"}&document=single</code>
+                                            </pre>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <div class="row row-no-padding row-eq-height">
+                            <div class="col-md-6 col-xs-12 section">
+                                <div class="api-information" id="14">
+                                     <div class="heading">
+                                        <div class="name">
+                                            <span class="GET method" >GET</span>
+                                            get conversation <span class="lock-icon"></span>
+                                        </div>
+                                     </div>
+                                    <div class="url">http://54.254.31.54:8080/dbservice/findData?type=conversation&customer=insent&query={"name":"welcome"}&document=single</div>
+                                    
+                                    <div class="description request-description">
+                                        <p>get a conversation</p>
+                                    </div>
+                                    
+                                    <div class="request-body">
+                                        <div class="body-heading">PARAMS</div>
+                                        <hr>
+                                          <div class="param row">
+                                            <div class="name col-md-3 col-xs-12">type</div>
+                                            <div class="value col-md-9 col-xs-12">conversation</div>
+                                            <div class="description col-md-9 col-xs-12"><p>None</p>
+                                            </div>
+                                          </div>
+                                          <div class="param row">
+                                            <div class="name col-md-3 col-xs-12">customer</div>
+                                            <div class="value col-md-9 col-xs-12">insent</div>
+                                            <div class="description col-md-9 col-xs-12"><p>None</p>
+                                            </div>
+                                          </div>
+                                          <div class="param row">
+                                            <div class="name col-md-3 col-xs-12">query</div>
+                                            <div class="value col-md-9 col-xs-12">{\"name\":\"welcome\"}</div>
+                                            <div class="description col-md-9 col-xs-12"><p>None</p>
+                                            </div>
+                                          </div>
+                                          <div class="param row">
+                                            <div class="name col-md-3 col-xs-12">document</div>
+                                            <div class="value col-md-9 col-xs-12">single</div>
+                                            <div class="description col-md-9 col-xs-12"><p>None</p>
+                                            </div>
+                                          </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-xs-12 examples">
+                                <div class="sample-request">
+                                    <div class="heading">
+                                        <span>Example Request</span>
+                                    </div>
+                                    <div class="responses-index">
+                                        <div class="dropdown response-name">
+                                            <button class="btn   responses-dropdown truncate" type="button" id="f678f251-1750-4e3a-b5d8-05b4c6b0fb37_dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                              <span id="selected" class="response-name-label">get conversation</span>
+                                                <span class="caret"></span>
+
+                                            </button>
+
+                                            <ul class="dropdown-menu" aria-labelledby="f678f251-1750-4e3a-b5d8-05b4c6b0fb37_dropdown">
+                                                <li class="truncate" data-request-info="14" data-response-info="response_14">get conversation</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="formatted-requests " data-request-id="14"  data-id="response_14">
+                                    <div class="request code-snippet">
+                                        <div>
+                                            <pre class="click-to-expand-wrapper is-snippet-wrapper " data-title="get conversation">
+                                                <code class="is-highlighted">
+GET http://54.254.31.54:8080/dbservice/findData?type=conversation&customer=insent&query={"name":"welcome"}&document=single</code>
+                                            </pre>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <div class="row row-no-padding row-eq-height">
+                            <div class="col-md-6 col-xs-12 section">
+                                <div class="api-information" id="15">
+                                     <div class="heading">
+                                        <div class="name">
+                                            <span class="GET method" >GET</span>
+                                            get all user <span class="lock-icon"></span>
+                                        </div>
+                                     </div>
+                                    <div class="url">http://54.254.31.54:8080/dbservice/findData?type=user&customer=insent&query={"image":"http://abc.com"}&document=all</div>
+                                    
+                                    <div class="description request-description">
+                                        <p>get all user</p>
+                                    </div>
+                                    
+                                    <div class="request-body">
+                                        <div class="body-heading">PARAMS</div>
+                                        <hr>
+                                          <div class="param row">
+                                            <div class="name col-md-3 col-xs-12">type</div>
+                                            <div class="value col-md-9 col-xs-12">user</div>
+                                            <div class="description col-md-9 col-xs-12"><p>None</p>
+                                            </div>
+                                          </div>
+                                          <div class="param row">
+                                            <div class="name col-md-3 col-xs-12">customer</div>
+                                            <div class="value col-md-9 col-xs-12">insent</div>
+                                            <div class="description col-md-9 col-xs-12"><p>None</p>
+                                            </div>
+                                          </div>
+                                          <div class="param row">
+                                            <div class="name col-md-3 col-xs-12">query</div>
+                                            <div class="value col-md-9 col-xs-12">{\"image\":\"http://abc.com\"}</div>
+                                            <div class="description col-md-9 col-xs-12"><p>None</p>
+                                            </div>
+                                          </div>
+                                          <div class="param row">
+                                            <div class="name col-md-3 col-xs-12">document</div>
+                                            <div class="value col-md-9 col-xs-12">all</div>
+                                            <div class="description col-md-9 col-xs-12"><p>None</p>
+                                            </div>
+                                          </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-xs-12 examples">
+                                <div class="sample-request">
+                                    <div class="heading">
+                                        <span>Example Request</span>
+                                    </div>
+                                    <div class="responses-index">
+                                        <div class="dropdown response-name">
+                                            <button class="btn   responses-dropdown truncate" type="button" id="f678f251-1750-4e3a-b5d8-05b4c6b0fb37_dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                              <span id="selected" class="response-name-label">get all user</span>
+                                                <span class="caret"></span>
+
+                                            </button>
+
+                                            <ul class="dropdown-menu" aria-labelledby="f678f251-1750-4e3a-b5d8-05b4c6b0fb37_dropdown">
+                                                <li class="truncate" data-request-info="15" data-response-info="response_15">get all user</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="formatted-requests " data-request-id="15"  data-id="response_15">
+                                    <div class="request code-snippet">
+                                        <div>
+                                            <pre class="click-to-expand-wrapper is-snippet-wrapper " data-title="get all user">
+                                                <code class="is-highlighted">
+GET http://54.254.31.54:8080/dbservice/findData?type=user&customer=insent&query={"image":"http://abc.com"}&document=all</code>
+                                            </pre>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <div class="row row-no-padding row-eq-height">
+                            <div class="col-md-6 col-xs-12 section">
+                                <div class="api-information" id="16">
+                                     <div class="heading">
+                                        <div class="name">
+                                            <span class="GET method" >GET</span>
+                                            get all visitor <span class="lock-icon"></span>
+                                        </div>
+                                     </div>
+                                    <div class="url">http://54.254.31.54:8080/dbservice/findData?type=visitor&customer=insent&query={}&document=all</div>
+                                    
+                                    <div class="description request-description">
+                                        <p>get all visitor</p>
+                                    </div>
+                                    
+                                    <div class="request-body">
+                                        <div class="body-heading">PARAMS</div>
+                                        <hr>
+                                          <div class="param row">
+                                            <div class="name col-md-3 col-xs-12">type</div>
+                                            <div class="value col-md-9 col-xs-12">visitor</div>
+                                            <div class="description col-md-9 col-xs-12"><p>None</p>
+                                            </div>
+                                          </div>
+                                          <div class="param row">
+                                            <div class="name col-md-3 col-xs-12">customer</div>
+                                            <div class="value col-md-9 col-xs-12">insent</div>
+                                            <div class="description col-md-9 col-xs-12"><p>None</p>
+                                            </div>
+                                          </div>
+                                          <div class="param row">
+                                            <div class="name col-md-3 col-xs-12">query</div>
+                                            <div class="value col-md-9 col-xs-12">{}</div>
+                                            <div class="description col-md-9 col-xs-12"><p>None</p>
+                                            </div>
+                                          </div>
+                                          <div class="param row">
+                                            <div class="name col-md-3 col-xs-12">document</div>
+                                            <div class="value col-md-9 col-xs-12">all</div>
+                                            <div class="description col-md-9 col-xs-12"><p>None</p>
+                                            </div>
+                                          </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-xs-12 examples">
+                                <div class="sample-request">
+                                    <div class="heading">
+                                        <span>Example Request</span>
+                                    </div>
+                                    <div class="responses-index">
+                                        <div class="dropdown response-name">
+                                            <button class="btn   responses-dropdown truncate" type="button" id="f678f251-1750-4e3a-b5d8-05b4c6b0fb37_dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                              <span id="selected" class="response-name-label">get all visitor</span>
+                                                <span class="caret"></span>
+
+                                            </button>
+
+                                            <ul class="dropdown-menu" aria-labelledby="f678f251-1750-4e3a-b5d8-05b4c6b0fb37_dropdown">
+                                                <li class="truncate" data-request-info="16" data-response-info="response_16">get all visitor</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="formatted-requests " data-request-id="16"  data-id="response_16">
+                                    <div class="request code-snippet">
+                                        <div>
+                                            <pre class="click-to-expand-wrapper is-snippet-wrapper " data-title="get all visitor">
+                                                <code class="is-highlighted">
+GET http://54.254.31.54:8080/dbservice/findData?type=visitor&customer=insent&query={}&document=all</code>
+                                            </pre>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <div class="row row-no-padding row-eq-height">
+                            <div class="col-md-6 col-xs-12 section">
+                                <div class="api-information" id="17">
+                                     <div class="heading">
+                                        <div class="name">
+                                            <span class="GET method" >GET</span>
+                                            get all conversation <span class="lock-icon"></span>
+                                        </div>
+                                     </div>
+                                    <div class="url">http://54.254.31.54:8080/dbservice/findData?type=conversation&customer=insent&query={}&document=all</div>
+                                    
+                                    <div class="description request-description">
+                                        <p>get all conversation</p>
+                                    </div>
+                                    
+                                    <div class="request-body">
+                                        <div class="body-heading">PARAMS</div>
+                                        <hr>
+                                          <div class="param row">
+                                            <div class="name col-md-3 col-xs-12">type</div>
+                                            <div class="value col-md-9 col-xs-12">conversation</div>
+                                            <div class="description col-md-9 col-xs-12"><p>None</p>
+                                            </div>
+                                          </div>
+                                          <div class="param row">
+                                            <div class="name col-md-3 col-xs-12">customer</div>
+                                            <div class="value col-md-9 col-xs-12">insent</div>
+                                            <div class="description col-md-9 col-xs-12"><p>None</p>
+                                            </div>
+                                          </div>
+                                          <div class="param row">
+                                            <div class="name col-md-3 col-xs-12">query</div>
+                                            <div class="value col-md-9 col-xs-12">{}</div>
+                                            <div class="description col-md-9 col-xs-12"><p>None</p>
+                                            </div>
+                                          </div>
+                                          <div class="param row">
+                                            <div class="name col-md-3 col-xs-12">document</div>
+                                            <div class="value col-md-9 col-xs-12">all</div>
+                                            <div class="description col-md-9 col-xs-12"><p>None</p>
+                                            </div>
+                                          </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-xs-12 examples">
+                                <div class="sample-request">
+                                    <div class="heading">
+                                        <span>Example Request</span>
+                                    </div>
+                                    <div class="responses-index">
+                                        <div class="dropdown response-name">
+                                            <button class="btn   responses-dropdown truncate" type="button" id="f678f251-1750-4e3a-b5d8-05b4c6b0fb37_dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                              <span id="selected" class="response-name-label">get all conversation</span>
+                                                <span class="caret"></span>
+
+                                            </button>
+
+                                            <ul class="dropdown-menu" aria-labelledby="f678f251-1750-4e3a-b5d8-05b4c6b0fb37_dropdown">
+                                                <li class="truncate" data-request-info="17" data-response-info="response_17">get all conversation</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="formatted-requests " data-request-id="17"  data-id="response_17">
+                                    <div class="request code-snippet">
+                                        <div>
+                                            <pre class="click-to-expand-wrapper is-snippet-wrapper " data-title="get all conversation">
+                                                <code class="is-highlighted">
+GET http://54.254.31.54:8080/dbservice/findData?type=conversation&customer=insent&query={}&document=all</code>
+                                            </pre>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <div class="row row-no-padding row-eq-height">
+                            <div class="col-md-6 col-xs-12 section">
+                                <div class="api-information" id="18">
+                                     <div class="heading">
+                                        <div class="name">
+                                            <span class="GET method" >GET</span>
+                                            aggregate on user <span class="lock-icon"></span>
+                                        </div>
+                                     </div>
+                                    <div class="url">http://54.254.31.54:8080/dbservice/findData?type=user&customer=insent&query=[{ "$match": { "name": "abc" }}, { "$group": { "_id": "$email" }}]&operation=aggregate</div>
+                                    
+                                    <div class="request-body">
+                                        <div class="body-heading">PARAMS</div>
+                                        <hr>
+                                          <div class="param row">
+                                            <div class="name col-md-3 col-xs-12">type</div>
+                                            <div class="value col-md-9 col-xs-12">user</div>
+                                            <div class="description col-md-9 col-xs-12"><p>None</p>
+                                            </div>
+                                          </div>
+                                          <div class="param row">
+                                            <div class="name col-md-3 col-xs-12">customer</div>
+                                            <div class="value col-md-9 col-xs-12">insent</div>
+                                            <div class="description col-md-9 col-xs-12"><p>None</p>
+                                            </div>
+                                          </div>
+                                          <div class="param row">
+                                            <div class="name col-md-3 col-xs-12">query</div>
+                                            <div class="value col-md-9 col-xs-12">[{ \"$match\": { \"name\": \"abc\" }}, { \"$group\": { \"_id\": \"$email\" }}]</div>
+                                            <div class="description col-md-9 col-xs-12"><p>None</p>
+                                            </div>
+                                          </div>
+                                          <div class="param row">
+                                            <div class="name col-md-3 col-xs-12">operation</div>
+                                            <div class="value col-md-9 col-xs-12">aggregate</div>
+                                            <div class="description col-md-9 col-xs-12"><p>None</p>
+                                            </div>
+                                          </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-xs-12 examples">
+                                <div class="sample-request">
+                                    <div class="heading">
+                                        <span>Example Request</span>
+                                    </div>
+                                    <div class="responses-index">
+                                        <div class="dropdown response-name">
+                                            <button class="btn   responses-dropdown truncate" type="button" id="f678f251-1750-4e3a-b5d8-05b4c6b0fb37_dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                              <span id="selected" class="response-name-label">aggregate on user</span>
+                                                <span class="caret"></span>
+
+                                            </button>
+
+                                            <ul class="dropdown-menu" aria-labelledby="f678f251-1750-4e3a-b5d8-05b4c6b0fb37_dropdown">
+                                                <li class="truncate" data-request-info="18" data-response-info="response_18">aggregate on user</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="formatted-requests " data-request-id="18"  data-id="response_18">
+                                    <div class="request code-snippet">
+                                        <div>
+                                            <pre class="click-to-expand-wrapper is-snippet-wrapper " data-title="aggregate on user">
+                                                <code class="is-highlighted">
+GET http://54.254.31.54:8080/dbservice/findData?type=user&customer=insent&query=[{ "$match": { "name": "abc" }}, { "$group": { "_id": "$email" }}]&operation=aggregate</code>
+                                            </pre>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <div class="row row-no-padding row-eq-height">
+                            <div class="col-md-6 col-xs-12 section">
+                                <div class="api-information" id="19">
+                                     <div class="heading">
+                                        <div class="name">
+                                            <span class="GET method" >GET</span>
+                                            aggregate on visitor <span class="lock-icon"></span>
+                                        </div>
+                                     </div>
+                                    <div class="url">http://54.254.31.54:8080/dbservice/findData?type=visitor&customer=insent&query=[{ "$match": { "name": "abc2" }}, { "$group": { "_id": "$company" }}]&operation=aggregate</div>
+                                    
+                                    <div class="request-body">
+                                        <div class="body-heading">PARAMS</div>
+                                        <hr>
+                                          <div class="param row">
+                                            <div class="name col-md-3 col-xs-12">type</div>
+                                            <div class="value col-md-9 col-xs-12">visitor</div>
+                                            <div class="description col-md-9 col-xs-12"><p>None</p>
+                                            </div>
+                                          </div>
+                                          <div class="param row">
+                                            <div class="name col-md-3 col-xs-12">customer</div>
+                                            <div class="value col-md-9 col-xs-12">insent</div>
+                                            <div class="description col-md-9 col-xs-12"><p>None</p>
+                                            </div>
+                                          </div>
+                                          <div class="param row">
+                                            <div class="name col-md-3 col-xs-12">query</div>
+                                            <div class="value col-md-9 col-xs-12">[{ \"$match\": { \"name\": \"abc2\" }}, { \"$group\": { \"_id\": \"$company\" }}]</div>
+                                            <div class="description col-md-9 col-xs-12"><p>None</p>
+                                            </div>
+                                          </div>
+                                          <div class="param row">
+                                            <div class="name col-md-3 col-xs-12">operation</div>
+                                            <div class="value col-md-9 col-xs-12">aggregate</div>
+                                            <div class="description col-md-9 col-xs-12"><p>None</p>
+                                            </div>
+                                          </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-xs-12 examples">
+                                <div class="sample-request">
+                                    <div class="heading">
+                                        <span>Example Request</span>
+                                    </div>
+                                    <div class="responses-index">
+                                        <div class="dropdown response-name">
+                                            <button class="btn   responses-dropdown truncate" type="button" id="f678f251-1750-4e3a-b5d8-05b4c6b0fb37_dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                              <span id="selected" class="response-name-label">aggregate on visitor</span>
+                                                <span class="caret"></span>
+
+                                            </button>
+
+                                            <ul class="dropdown-menu" aria-labelledby="f678f251-1750-4e3a-b5d8-05b4c6b0fb37_dropdown">
+                                                <li class="truncate" data-request-info="19" data-response-info="response_19">aggregate on visitor</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="formatted-requests " data-request-id="19"  data-id="response_19">
+                                    <div class="request code-snippet">
+                                        <div>
+                                            <pre class="click-to-expand-wrapper is-snippet-wrapper " data-title="aggregate on visitor">
+                                                <code class="is-highlighted">
+GET http://54.254.31.54:8080/dbservice/findData?type=visitor&customer=insent&query=[{ "$match": { "name": "abc2" }}, { "$group": { "_id": "$company" }}]&operation=aggregate</code>
+                                            </pre>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <div class="row row-no-padding row-eq-height">
+                            <div class="col-md-6 col-xs-12 section">
+                                <div class="api-information" id="20">
+                                     <div class="heading">
+                                        <div class="name">
+                                            <span class="GET method" >GET</span>
+                                            aggregate on conversation <span class="lock-icon"></span>
+                                        </div>
+                                     </div>
+                                    <div class="url">http://54.254.31.54:8080/dbservice/findData?type=conversation&customer=insent&query=[{ "$match": { "name": "welcome" }}, { "$group": { "_id": "$users" }}]&operation=aggregate</div>
+                                    
+                                    <div class="request-body">
+                                        <div class="body-heading">PARAMS</div>
+                                        <hr>
+                                          <div class="param row">
+                                            <div class="name col-md-3 col-xs-12">type</div>
+                                            <div class="value col-md-9 col-xs-12">conversation</div>
+                                            <div class="description col-md-9 col-xs-12"><p>None</p>
+                                            </div>
+                                          </div>
+                                          <div class="param row">
+                                            <div class="name col-md-3 col-xs-12">customer</div>
+                                            <div class="value col-md-9 col-xs-12">insent</div>
+                                            <div class="description col-md-9 col-xs-12"><p>None</p>
+                                            </div>
+                                          </div>
+                                          <div class="param row">
+                                            <div class="name col-md-3 col-xs-12">query</div>
+                                            <div class="value col-md-9 col-xs-12">[{ \"$match\": { \"name\": \"welcome\" }}, { \"$group\": { \"_id\": \"$users\" }}]</div>
+                                            <div class="description col-md-9 col-xs-12"><p>None</p>
+                                            </div>
+                                          </div>
+                                          <div class="param row">
+                                            <div class="name col-md-3 col-xs-12">operation</div>
+                                            <div class="value col-md-9 col-xs-12">aggregate</div>
+                                            <div class="description col-md-9 col-xs-12"><p>None</p>
+                                            </div>
+                                          </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-xs-12 examples">
+                                <div class="sample-request">
+                                    <div class="heading">
+                                        <span>Example Request</span>
+                                    </div>
+                                    <div class="responses-index">
+                                        <div class="dropdown response-name">
+                                            <button class="btn   responses-dropdown truncate" type="button" id="f678f251-1750-4e3a-b5d8-05b4c6b0fb37_dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                              <span id="selected" class="response-name-label">aggregate on conversation</span>
+                                                <span class="caret"></span>
+
+                                            </button>
+
+                                            <ul class="dropdown-menu" aria-labelledby="f678f251-1750-4e3a-b5d8-05b4c6b0fb37_dropdown">
+                                                <li class="truncate" data-request-info="20" data-response-info="response_20">aggregate on conversation</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="formatted-requests " data-request-id="20"  data-id="response_20">
+                                    <div class="request code-snippet">
+                                        <div>
+                                            <pre class="click-to-expand-wrapper is-snippet-wrapper " data-title="aggregate on conversation">
+                                                <code class="is-highlighted">
+GET http://54.254.31.54:8080/dbservice/findData?type=conversation&customer=insent&query=[{ "$match": { "name": "welcome" }}, { "$group": { "_id": "$users" }}]&operation=aggregate</code>
+                                            </pre>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </main>
+        <!-- page-content" -->
+    </div>
+    <!-- page-wrapper -->
+    <!-- using online scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous">
+    </script>
+    <script src="https://malihu.github.io/custom-scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="js/bootstrap-treeview.min.js"></script>
+    <script src="js/main.min.js"></script>
+    <script type="application/javascript">
+        var data = [{'text': 'add new customer', 'href': '#1', 'method': 'POST'}, {'text': 'insert user', 'href': '#2', 'method': 'POST'}, {'text': 'insert visitor', 'href': '#3', 'method': 'POST'}, {'text': 'insert conversation', 'href': '#4', 'method': 'POST'}, {'text': 'delete customer', 'href': '#5', 'method': 'DELETE'}, {'text': 'delete visitor', 'href': '#6', 'method': 'DELETE'}, {'text': 'delete user', 'href': '#7', 'method': 'DELETE'}, {'text': 'delete conversation', 'href': '#8', 'method': 'DELETE'}, {'text': 'update user', 'href': '#9', 'method': 'PUT'}, {'text': 'update visitor', 'href': '#10', 'method': 'PUT'}, {'text': 'update conversation', 'href': '#11', 'method': 'PUT'}, {'text': 'get user', 'href': '#12', 'method': 'GET'}, {'text': 'get visitor', 'href': '#13', 'method': 'GET'}, {'text': 'get conversation', 'href': '#14', 'method': 'GET'}, {'text': 'get all user', 'href': '#15', 'method': 'GET'}, {'text': 'get all visitor', 'href': '#16', 'method': 'GET'}, {'text': 'get all conversation', 'href': '#17', 'method': 'GET'}, {'text': 'aggregate on user', 'href': '#18', 'method': 'GET'}, {'text': 'aggregate on visitor', 'href': '#19', 'method': 'GET'}, {'text': 'aggregate on conversation', 'href': '#20', 'method': 'GET'}]
+        $('#tree').treeview({
+            data: data,
+            levels: 10,
+            expandIcon: 'fas fa-caret-right',
+            collapseIcon: 'fas fa-caret-down',
+            enableLinks: true,
+            showIcon: true,
+            showMethod: true
+        });
+    </script>
+
+</body>
+
+</html>
