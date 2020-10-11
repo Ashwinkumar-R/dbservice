@@ -564,6 +564,342 @@
 				"description": "update conversation record"
 			},
 			"response": []
+		},
+		{
+			"name": "get user",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "a4d7a951-e94d-423b-87cd-2c81e17943a0",
+						"exec": [
+							"pm.test(\"get visitor\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://54.254.31.54:8080/dbservice/findData?type=user&customer=insent&query={\"name\":\"abc\"}&document=single",
+					"protocol": "http",
+					"host": [
+						"54",
+						"254",
+						"31",
+						"54"
+					],
+					"port": "8080",
+					"path": [
+						"dbservice",
+						"findData"
+					],
+					"query": [
+						{
+							"key": "type",
+							"value": "user"
+						},
+						{
+							"key": "customer",
+							"value": "insent"
+						},
+						{
+							"key": "query",
+							"value": "{\"name\":\"abc\"}"
+						},
+						{
+							"key": "document",
+							"value": "single"
+						}
+					]
+				},
+				"description": "get a user"
+			},
+			"response": []
+		},
+		{
+			"name": "get visitor",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "a4d7a951-e94d-423b-87cd-2c81e17943a0",
+						"exec": [
+							"pm.test(\"get visitor\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://54.254.31.54:8080/dbservice/findData?type=visitor&customer=insent&query={\"name\":\"abc\"}&document=single",
+					"protocol": "http",
+					"host": [
+						"54",
+						"254",
+						"31",
+						"54"
+					],
+					"port": "8080",
+					"path": [
+						"dbservice",
+						"findData"
+					],
+					"query": [
+						{
+							"key": "type",
+							"value": "visitor"
+						},
+						{
+							"key": "customer",
+							"value": "insent"
+						},
+						{
+							"key": "query",
+							"value": "{\"name\":\"abc\"}"
+						},
+						{
+							"key": "document",
+							"value": "single"
+						}
+					]
+				},
+				"description": "get a visitor"
+			},
+			"response": []
+		},
+		{
+			"name": "get conversation",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "a4d7a951-e94d-423b-87cd-2c81e17943a0",
+						"exec": [
+							"pm.test(\"get conversation\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://54.254.31.54:8080/dbservice/findData?type=conversation&customer=insent&query={\"name\":\"welcome\"}&document=single",
+					"protocol": "http",
+					"host": [
+						"54",
+						"254",
+						"31",
+						"54"
+					],
+					"port": "8080",
+					"path": [
+						"dbservice",
+						"findData"
+					],
+					"query": [
+						{
+							"key": "type",
+							"value": "conversation"
+						},
+						{
+							"key": "customer",
+							"value": "insent"
+						},
+						{
+							"key": "query",
+							"value": "{\"name\":\"welcome\"}"
+						},
+						{
+							"key": "document",
+							"value": "single"
+						}
+					]
+				},
+				"description": "get a conversation"
+			},
+			"response": []
+		},
+		{
+			"name": "get all user",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "a4d7a951-e94d-423b-87cd-2c81e17943a0",
+						"exec": [
+							"pm.test(\"get all user\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://54.254.31.54:8080/dbservice/findData?type=user&customer=insent&query={\"image\":\"http://abc.com\"}&document=all",
+					"protocol": "http",
+					"host": [
+						"54",
+						"254",
+						"31",
+						"54"
+					],
+					"port": "8080",
+					"path": [
+						"dbservice",
+						"findData"
+					],
+					"query": [
+						{
+							"key": "type",
+							"value": "user"
+						},
+						{
+							"key": "customer",
+							"value": "insent"
+						},
+						{
+							"key": "query",
+							"value": "{\"image\":\"http://abc.com\"}"
+						},
+						{
+							"key": "document",
+							"value": "all"
+						}
+					]
+				},
+				"description": "get all user"
+			},
+			"response": []
+		},
+		{
+			"name": "get all visitor",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "a4d7a951-e94d-423b-87cd-2c81e17943a0",
+						"exec": [
+							"pm.test(\"get all visitor\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://54.254.31.54:8080/dbservice/findData?type=visitor&customer=insent&query={}&document=all",
+					"protocol": "http",
+					"host": [
+						"54",
+						"254",
+						"31",
+						"54"
+					],
+					"port": "8080",
+					"path": [
+						"dbservice",
+						"findData"
+					],
+					"query": [
+						{
+							"key": "type",
+							"value": "visitor"
+						},
+						{
+							"key": "customer",
+							"value": "insent"
+						},
+						{
+							"key": "query",
+							"value": "{}"
+						},
+						{
+							"key": "document",
+							"value": "all"
+						}
+					]
+				},
+				"description": "get all visitor"
+			},
+			"response": []
+		},
+		{
+			"name": "get all conversation",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "a4d7a951-e94d-423b-87cd-2c81e17943a0",
+						"exec": [
+							"pm.test(\"get all conversation\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://54.254.31.54:8080/dbservice/findData?type=conversation&customer=insent&query={}&document=all",
+					"protocol": "http",
+					"host": [
+						"54",
+						"254",
+						"31",
+						"54"
+					],
+					"port": "8080",
+					"path": [
+						"dbservice",
+						"findData"
+					],
+					"query": [
+						{
+							"key": "type",
+							"value": "conversation"
+						},
+						{
+							"key": "customer",
+							"value": "insent"
+						},
+						{
+							"key": "query",
+							"value": "{}"
+						},
+						{
+							"key": "document",
+							"value": "all"
+						}
+					]
+				},
+				"description": "get all conversation"
+			},
+			"response": []
 		}
 	],
 	"protocolProfileBehavior": {}
