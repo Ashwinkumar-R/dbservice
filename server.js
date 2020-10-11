@@ -120,7 +120,7 @@ class dbService {
                 this.logger.debug(`performDBOperation: ${msg}`)
                 return {status: 'error', msg: msg};
             } else {
-                return {status: 'ok'}
+                return {status: 'ok', result: res};
             }
         } else {
             const msg = 'DB connection is not ready..';
@@ -205,7 +205,20 @@ class dbService {
         }))
 
         router.get('/findData', asyncExpHandler(async function (req,res,next) {
+            // if document arg is not present, default assume as all matching records are requested
+            if (!req.query && !req.query.type && !req.query.customer && !req.query.query) {
+                let msg = `required arguments are missing`;
+                res.status(400).send({result:'error', msg:msg});         
+            } else {
+                let output = await that.performDBOperation(req.query, that.enums.operation.FIND);
 
+                if (output.status == 'ok') {
+                    let msg = `successfully executed`;
+                    res.status(200).send({result:'ok', data:output.result});    
+                } else {
+                    res.status(404).send({result:'error', msg:output.msg});
+                }
+            }
         }))
 
         //middleware to handle errors
