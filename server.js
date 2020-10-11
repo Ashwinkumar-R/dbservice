@@ -2,6 +2,10 @@
 /* file : server.js
 /* author : Ashwinkumar R
 /*
+/* This file is responsible for the following functionality
+/*      - Creates and monitor DocumentDB connection
+/*      - Creates Express server and required endpoints
+/*      - Handles incoming request via API and send/receive all requests/responses to/from DB module
 /*****************************************************************************************************/
 
 const express = require('express');
