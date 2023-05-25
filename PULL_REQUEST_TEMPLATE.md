@@ -1,7 +1,7 @@
-## Description
+### Description
 <!-- Please include a summary of the change and which issue is fixed. -->
----
-## Type of change
+
+### Type of change
 
 Please select the relevant options.
 
@@ -12,18 +12,20 @@ Please select the relevant options.
 
 ### Link to the JIRA Ticket(s) (if available)
 
-## How Has This Been Tested ?
+### How Has This Been Tested ?
 <!-- Please describe the tests that you ran to verify your changes. Please also list any relevant details for your test configuration -->
 
-## Does this PR introduce or remove new Environment variables
+### Does this PR introduce or remove new Environment variables
 <!-- Mention added and deleted variables as a separate list -->
 
-## Add screenshots if this involves UI change 
+### Add screenshots if this involves UI change 
 
-## Add Reviewers
+### Add Reviewers
 <!-- Use '@' to mention the reviewers -->
 
-## Checklist
+---
+
+### Checklist
 
 - [ ] My code follows the style guidelines of this project
 - [ ] I have performed a self-review of my own code
