@@ -1,6 +1,6 @@
 ## Description
+<!-- Please include a summary of the change and which issue is fixed. -->
 
-Please include a summary of the change and which issue is fixed.
 
 ## Type of change
 
@@ -12,8 +12,6 @@ Please select the relevant options.
 - [ ] This change requires a documentation update
 
 ## Link to the JIRA Ticket(s) (if available)
-<!-- If there are multiple tickets copy paste the below syntax and update the URL -->
-(paste the URL here)
 
 
 ## How Has This Been Tested ?
@@ -22,9 +20,8 @@ Please select the relevant options.
 ## Does this PR introduce or remove new Environment variables
 <!-- Mention added and deleted variables as a separate list -->
 
-## If this involves UI change add screenshots
-<!-- If there are multiple images copy paste the below syntax and update the image -->
-(link to image)
+## Add screenshots if this involves UI change 
+
 
 ## Add Reviewers
 <!-- Use '@' to mention the reviewers -->
