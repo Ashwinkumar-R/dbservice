@@ -1,6 +1,6 @@
 ## Description
 <!-- Please include a summary of the change and which issue is fixed. -->
-
+---
 ## Type of change
 
 Please select the relevant options.
@@ -10,7 +10,7 @@ Please select the relevant options.
 - [ ] Breaking change (fix or feature that would cause existing functionality to not work as expected)
 - [ ] This change requires a documentation update
 
-## Link to the JIRA Ticket(s) (if available)
+### Link to the JIRA Ticket(s) (if available)
 
 ## How Has This Been Tested ?
 <!-- Please describe the tests that you ran to verify your changes. Please also list any relevant details for your test configuration -->
