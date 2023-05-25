@@ -1,7 +1,6 @@
 ## Description
 <!-- Please include a summary of the change and which issue is fixed. -->
 
-
 ## Type of change
 
 Please select the relevant options.
@@ -13,7 +12,6 @@ Please select the relevant options.
 
 ## Link to the JIRA Ticket(s) (if available)
 
-
 ## How Has This Been Tested ?
 <!-- Please describe the tests that you ran to verify your changes. Please also list any relevant details for your test configuration -->
 
@@ -21,7 +19,6 @@ Please select the relevant options.
 <!-- Mention added and deleted variables as a separate list -->
 
 ## Add screenshots if this involves UI change 
-
 
 ## Add Reviewers
 <!-- Use '@' to mention the reviewers -->
